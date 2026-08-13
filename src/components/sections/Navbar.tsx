@@ -22,7 +22,10 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-panel-border/60 bg-deep-ink/80 backdrop-blur-md"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-        <a href="#" className="font-display text-lg font-semibold tracking-tight text-foreground">
+        <a
+          href="#"
+          className="rounded font-display text-lg font-semibold tracking-tight text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bio"
+        >
           Veyra<span className="text-bio">.</span>
         </a>
 
@@ -31,7 +34,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="font-mono text-xs uppercase tracking-wider text-muted transition-colors hover:text-foreground"
+              className="rounded font-mono text-xs uppercase tracking-wider text-muted transition-colors hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bio"
             >
               {link.label}
             </a>
@@ -93,7 +96,7 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 font-mono text-sm uppercase tracking-wider text-muted transition-colors hover:bg-panel hover:text-foreground"
+                  className="rounded-lg px-3 py-3 font-mono text-sm uppercase tracking-wider text-muted transition-colors hover:bg-panel hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bio"
                 >
                   {link.label}
                 </a>

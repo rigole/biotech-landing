@@ -85,9 +85,17 @@ export function Hero() {
           transition={{ duration: 0.9, ease: EASE, delay: 0.35 }}
           className="relative aspect-square w-full rounded-3xl border border-panel-border bg-panel"
         >
-          <div className="absolute inset-0 overflow-hidden rounded-3xl">
+          <div
+            className="absolute inset-0 overflow-hidden rounded-3xl"
+            aria-hidden="true"
+          >
             <ProteinRibbon />
           </div>
+          <span className="sr-only">
+            Rotating 3D visualization of an AI-generated protein structure,
+            showing alpha helices and beta sheets with a live confidence
+            score.
+          </span>
           <DataReadout />
         </motion.div>
       </div>
