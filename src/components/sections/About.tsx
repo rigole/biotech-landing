@@ -1,7 +1,13 @@
 "use client";
 
 import { gsap } from "gsap";
+import  dynamic  from "next/dynamic"
 import { useScopedGsap } from "@/lib/hooks/useGsap";
+
+const MoleculeField = dynamic(
+  () => import("@/components/three/MoleculeField").then((mod) => mod.MoleculeField),
+  { ssr: false }
+);
 
 const pillars = [
   {
@@ -57,6 +63,12 @@ export function About() {
 
   return (
     <section id="about" className="relative py-28 lg:py-36">
+      <div 
+        className="pointer-events-none absolute inset-0 opacity-60"
+        aria-hidden="true"
+      >
+        <MoleculeField />
+      </div>
       <div ref={containerRef} className="mx-auto max-w-7xl px-6 lg:px-12">
         <div data-reveal="heading" className="max-w-2xl">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-bio">
